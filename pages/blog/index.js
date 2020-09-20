@@ -8,7 +8,7 @@ import {Layout} from '../../src/components/blog/Layout'
 export default function BlogPage() {
   return (
       <div sx={{variant: 'layout.container'}}>
-        <Layout pageTitle="Blog" description="Mentorshyp Blog"/>
+        <Layout pageTitle="Blog" description="Mentorshyp Blog">
         <header sx={{variant: 'layout.nav'}}>
           <Nav/>
         </header>
@@ -26,6 +26,7 @@ export default function BlogPage() {
             })}
           </main>
         </section>
+        </Layout>
       </div>
   )
 }

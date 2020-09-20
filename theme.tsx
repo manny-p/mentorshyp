@@ -5,8 +5,8 @@ const theme = {
     breakpoints: ['40em', '52em', '64em', '80em'],
     // colors: {
     //     ...future.colors,
-    //     fuckyou: 'yellow',
-    //     text2: 'blue',
+    //     colorTest: 'yellow',
+    //     textTest: 'blue',
     // },
     // fontSize: [16, 20, 24, 32],
     layout: {
