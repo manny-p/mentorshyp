@@ -1,10 +1,15 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
-import {Flex, Grid} from '@theme-ui/components'
+import {Grid} from '@theme-ui/components'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUser} from '@fortawesome/pro-duotone-svg-icons'
+import {useContext} from 'react'
+import {Context} from '../../../../../store'
 
-export default function Video() {
+export default function VideoInactive() {
+
+  const {call} = useContext(Context)
+
   return (
       <>
         <Grid
@@ -14,17 +19,19 @@ export default function Video() {
               // bg:'modes.dark.secondary',
               border: '.1rem solid black',
             }}
+            style={{display: call ? 'none' : 'grid'}}
         >
+          {/*Guest Caller*/}
           <section sx={{
             gridColumnStart: '1',
             gridColumnEnd: '2',
             bg: 'modes.dark.secondary',
           }}>
             <div sx={{
-              variant: 'components.main.inactive.video',
+              variant: 'components.main.inactive.videoContainer',
             }}>
-              <h1>User 1</h1>
-              <FontAwesomeIcon icon={faUser} sx={{variant: 'components.main.inactive.logo'}}/>
+              <h1>Guest</h1>
+              <FontAwesomeIcon icon={faUser} sx={{variant: 'components.main.inactive.avatar.logo'}}/>
             </div>
           </section>
 
@@ -35,12 +42,12 @@ export default function Video() {
           }}>
             <div
                 sx={{
-                  variant: 'components.main.inactive.video',
+                  variant: 'components.main.inactive.videoContainer',
                   bg: 'modes.dark.primary',
 
                 }}>
-              <h1>User 2</h1>
-              <FontAwesomeIcon icon={faUser} sx={{variant: 'components.main.inactive.logo'}}/>
+              <h1>You</h1>
+              <FontAwesomeIcon icon={faUser} sx={{variant: 'components.main.inactive.avatar.logo'}}/>
             </div>
           </section>
         </Grid>

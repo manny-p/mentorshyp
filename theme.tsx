@@ -142,9 +142,15 @@ const theme = {
                 },
                 preferences: {
                     fontSize: [null, 2, 3],
-                    justifyContent: 'flex-end',
+                    justifyContent: 'space-around',
                     pr: '.5rem',
                     bg: 'modes.dark.highlight',
+                },
+                logo: {
+                    video: {
+                        fontSize: 'calc(48px + 46 * ((100vw - 368px) / 800))',
+                        color: 'modes.dark.background',
+                    }
                 }
             }
         },
@@ -157,7 +163,7 @@ const theme = {
                 flexBasis: 0,
                 bg: 'modes.dark.background',
                 // color: 'modes.dark.text',
-                borderBottom: '.1rem solid black',
+                // borderBottom: '.1rem solid black',
                 // height: '100vh',
                 // minHeight: '50vh',
                 // minWidth: 320,
@@ -165,7 +171,7 @@ const theme = {
                 px: 'auto'
             },
             inactive: {
-                video: {
+                videoContainer: {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
@@ -181,10 +187,13 @@ const theme = {
                     px: 'auto',
                     fontSize: [1, 2, 3, 4],
                 },
-                logo: {
-                    fontSize: 'calc(48px + 46 * ((100vw - 368px) / 800))',
-                    color: 'modes.dark.background',
-                }
+                avatar: {
+                    logo: {
+                        fontSize: 'calc(48px + 46 * ((100vw - 368px) / 800))',
+                        color: 'modes.dark.background',
+                    }
+                },
+
             }
         }
     },

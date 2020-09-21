@@ -1,12 +1,10 @@
 /** @jsx jsx */
 import {Grid, jsx} from 'theme-ui'
-import React, {useRef, useState} from 'react'
+import React, {useContext, useRef, useState} from 'react'
 import {useEffect} from 'react'
 import {v4} from 'uuid'
 import {useRouter} from 'next/router'
-import Nav from '../../src/components/shared/Nav'
-import Channels from '../../src/components/user/dashboard/sidebar/Controls'
-import Controls from '../../src/components/user/dashboard/sidebar/Controls'
+import {Context} from '../../store'
 
 let Room
 export default Room = ({query: {roomId}}) => {
@@ -16,7 +14,7 @@ export default Room = ({query: {roomId}}) => {
   const [myPeer, setMyPeer] = useState()
   const [peers, setPeers] = useState({})
   const [stream, setStream] = useState()
-  // const [socket, setSocket] = useState()
+  const {setAudio} = useContext(Context)
 
   // Helper functions
   const addVideoStream = (video, stream) => {
@@ -71,6 +69,7 @@ export default Room = ({query: {roomId}}) => {
           call.answer(stream)
           call.on('stream', (userVideoStream) => {
             addVideoStream(remoteRef.current, userVideoStream)
+            setAudio(userVideoStream)
           })
         })
 
@@ -85,29 +84,41 @@ export default Room = ({query: {roomId}}) => {
 
   return (
       <>
-        <main sx={{ variant: 'components.main.video' }}>
+        <Grid
+            gap={0}
+            columns={['3fr 1fr']}
+            sx={{
+              border: '.1rem solid black',
+            }}
+        >
+
+          <main sx={{variant: 'components.main.video'}}>
+            {/*Guest Caller*/}
+            <video
+                id='audio'
+                ref={remoteRef}
+                muted
+                // muted={audio}
+                style={{
+                  height: '100vh',
+                  type: 'video/webm',
+                  width: '75vw',
+                  objectFit: 'cover',
+                }}
+            />
+          </main>
+
           <video
-              ref={remoteRef}
               muted
+              ref={localRef}
               style={{
-                background: 'brown',
-                width: '100%',
-                height: '700px',
+                height: '100vh',
+                type: 'video/webm',
+                width: '25vw',
                 objectFit: 'cover',
-                objectPosition: 'center',
               }}
           />
-        </main>
-        <video
-            muted
-            ref={localRef}
-            style={{
-              marginTop: '10px',
-              background: 'brown',
-              width: '95%',
-              marginLeft: '8px',
-            }}
-        />
+        </Grid>
       </>
   )
 }
