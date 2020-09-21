@@ -6,9 +6,9 @@ import {faUser} from '@fortawesome/pro-duotone-svg-icons'
 import {useContext} from 'react'
 import {Context} from '../../../../../store'
 
-export default function Video() {
-  const {call, setCall} = useContext(Context)
+export default function VideoInactive() {
 
+  const {call} = useContext(Context)
 
   return (
       <>

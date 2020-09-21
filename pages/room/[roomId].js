@@ -93,14 +93,16 @@ export default Room = ({query: {roomId}}) => {
           }}
       >
         <main sx={{ variant: 'components.main.video' }}>
+          {/*Guest Caller*/}
           <video
               ref={remoteRef}
               muted
               style={{
-                background: 'brown',
-                width: '100%',
+                height: '100vh',
+                type:"video/webm",
+                width: '58vw',
                 objectFit: 'cover',
-                objectPosition: 'center',
+                // objectPosition: 'center',
               }}
           />
         </main>
@@ -108,12 +110,15 @@ export default Room = ({query: {roomId}}) => {
             muted
             ref={localRef}
             style={{
-              marginTop: '10px',
-              background: 'brown',
-              width: '95%',
-              marginLeft: '8px',
+              height: '100vh',
+              type:"video/webm",
+              // marginTop: '10px',
+              // background: 'brown',
+              width: '42vw',
+              // marginLeft: '8px',
               objectFit: 'cover',
-              objectPosition: 'center',
+              // objectPosition: 'center',
+              // marginRight: 4,
             }}
         />
         </Grid>

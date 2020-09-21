@@ -1,16 +1,22 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
 import Nav from '../../src/components/shared/Nav'
-import Video from '../../src/components/user/dashboard/main/Video'
 import Channels from '../../src/components/user/dashboard/sidebar/Channels'
 import Controls from '../../src/components/user/dashboard/sidebar/Controls'
 import {Context} from '../../store'
 import {useContext} from 'react'
-// import Iframe from 'react-iframe'
+import VideoInactive from '../../src/components/user/dashboard/main/VideoInactive'
+import VideoActive from '../../src/components/user/dashboard/main/VideoActive'
 
 export default function DashboardPage() {
 
   const {call} = useContext(Context)
+
+  // const videoStatus = () => {
+  //   if (call) return <VideoActive/>
+  //   if (!call) return <VideoInactive/>
+  // }
+
 
   return (
       <div>
@@ -26,7 +32,14 @@ export default function DashboardPage() {
           </aside>
           <main sx={{variant: 'layout.video'}}>
             {/*inactive video state*/}
-            <Video/>
+            {/*<div>*/}
+              {/*{videoStatus}*/}
+            {/*</div>*/}
+
+     <VideoActive/>
+          <VideoInactive/>
+
+
           </main>
 
             {/*<div*/}
@@ -34,20 +47,11 @@ export default function DashboardPage() {
             {/*      variant: 'components.main.inactive.videoContainer',*/}
             {/*    }}*/}
             {/*>*/}
-              {/*<Iframe*/}
-              {/*    url="/room/calling"*/}
-              {/*    display={call ? 'block' : 'none'}*/}
-              {/*    sx={{*/}
-              {/*      height: '50vh',*/}
-              {/*      width: '100vw',*/}
-              {/*      position: 'fixed',*/}
-              {/*      zIndex: '10',*/}
-              {/*    }}*/}
-              {/*>*/}
-              {/*</Iframe>*/}
+
             {/*</div>*/}
 
         </div>
       </div>
   )
 }
+
