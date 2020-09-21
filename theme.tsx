@@ -145,6 +145,12 @@ const theme = {
                     justifyContent: 'flex-end',
                     pr: '.5rem',
                     bg: 'modes.dark.highlight',
+                },
+                logo: {
+                    video: {
+                        fontSize: 'calc(48px + 46 * ((100vw - 368px) / 800))',
+                        color: 'modes.dark.background',
+                    }
                 }
             }
         },
@@ -165,7 +171,7 @@ const theme = {
                 px: 'auto'
             },
             inactive: {
-                video: {
+                videoContainer: {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
@@ -181,10 +187,13 @@ const theme = {
                     px: 'auto',
                     fontSize: [1, 2, 3, 4],
                 },
-                logo: {
-                    fontSize: 'calc(48px + 46 * ((100vw - 368px) / 800))',
-                    color: 'modes.dark.background',
-                }
+                avatar: {
+                    logo: {
+                        fontSize: 'calc(48px + 46 * ((100vw - 368px) / 800))',
+                        color: 'modes.dark.background',
+                    }
+                },
+
             }
         }
     },

@@ -85,6 +85,13 @@ export default Room = ({query: {roomId}}) => {
 
   return (
       <>
+        <Grid
+          gap={0}
+          columns={['3fr 1fr']}
+          sx={{
+            border: '.1rem solid black',
+          }}
+      >
         <main sx={{ variant: 'components.main.video' }}>
           <video
               ref={remoteRef}
@@ -92,7 +99,6 @@ export default Room = ({query: {roomId}}) => {
               style={{
                 background: 'brown',
                 width: '100%',
-                height: '700px',
                 objectFit: 'cover',
                 objectPosition: 'center',
               }}
@@ -106,8 +112,11 @@ export default Room = ({query: {roomId}}) => {
               background: 'brown',
               width: '95%',
               marginLeft: '8px',
+              objectFit: 'cover',
+              objectPosition: 'center',
             }}
         />
+        </Grid>
       </>
   )
 }
