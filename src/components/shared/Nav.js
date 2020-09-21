@@ -2,16 +2,30 @@
 import {jsx} from 'theme-ui'
 import Link from 'next/link'
 import Search from './Search'
-import {Button} from '@theme-ui/components'
+import {Button, Flex} from '@theme-ui/components'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faRocket} from '@fortawesome/pro-duotone-svg-icons'
 
 export default function Nav() {
   return (
       <nav sx={{variant: 'components.nav'}}>
-        <Link href={"/"}>
-          <a sx={{ml: 2}}>Home</a>
-        </Link>
+        <Flex>
+          <Link href={'/'}>
+            <a sx={{
+              ml: 2,
+            }}><span sx={{color: 'modes.dark.primary'}}>Mentorshyp</span></a>
+          </Link>
+          <FontAwesomeIcon
+              icon={faRocket}
+              sx={{
+                color: 'modes.dark.text',
+              }}
+          >
+          </FontAwesomeIcon>
+        </Flex>
 
-        <Link href={"/dashboard"}>
+
+        <Link href={'/dashboard'}>
           <a>Dashboard</a>
         </Link>
 
@@ -20,10 +34,6 @@ export default function Nav() {
         </Link>
 
         <Search/>
-
-        <Link href={"/room/9a80cabe-45f6-4b8f-bd2e-49cc61f2bee9"}>
-          Chat
-        </Link>
 
         <Button sx={{
           variant: 'components.search.button',

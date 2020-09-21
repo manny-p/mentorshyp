@@ -3,15 +3,16 @@ import {jsx} from 'theme-ui'
 import Nav from '../../src/components/shared/Nav'
 import Channels from '../../src/components/user/dashboard/sidebar/Channels'
 import Controls from '../../src/components/user/dashboard/sidebar/Controls'
-import {Context} from '../../store'
-import {useContext} from 'react'
+// import {Context} from '../../store'
+// import {useContext} from 'react'
 import VideoInactive from '../../src/components/user/dashboard/main/VideoInactive'
 import VideoActive from '../../src/components/user/dashboard/main/VideoActive'
 import Inactive from '../../src/components/user/dashboard/main/event/Inactive'
+import TextChat from '../../src/components/user/dashboard/main/TextChat'
 
 export default function DashboardPage() {
 
-  const {call} = useContext(Context)
+  // const {call} = useContext(Context)
 
   // const videoStatus = () => {
   //   if (call) return <VideoActive/>
@@ -52,7 +53,7 @@ export default function DashboardPage() {
             />
             <VideoActive/>
             <VideoInactive/>
-
+            <TextChat/>
 
           </main>
 
