@@ -1,42 +1,15 @@
-// import React, {createContext, useEffect, useState} from 'react'
-// import firebase from './firebase.config'
-//
-// export const Context = createContext(null)
-//
-// export default function GlobalStateProvider({children}) {
+import React, {createContext, useRef, useState} from 'react'
 
-  // const [data, setData] = useState(null)
-  // const [loading, setLoading] = useState(true)
+export const Context = createContext(null)
 
-  // useEffect(
-  //     () => {
-  //       console.log(`fuck you ${firebase}`)
-  //       //  first @param () =>
-  //       const unsubscribe =
-  //           firebase.auth().onAuthStateChanged(function (user) {
-  //
-  //             if (user) {
-  //               setLoading(true)
-  //               setData(user)
-  //               setLoading(false)
-  //             }
-  //           })
-  //
-  //       return () => unsubscribe()
-  //
-  //     }, [loading]) //second @param is deps
+export default function GlobalStateProvider({children}) {
 
-//   const initialState = {
-//     user: data,
-//     loading,
-//     setLoading
-//   }
-//
-//   return (
-//       <Context.Provider value={initialState}>
-//         {children}
-//       </Context.Provider>
-//   )
-//
-// }
+  const [call, setCall] = useState(false)
 
+  const initialState = {
+    call,
+    setCall,
+  }
+
+  return <Context.Provider value={initialState}>{children}</Context.Provider>
+}

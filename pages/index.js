@@ -1,11 +1,16 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
+import HomeLayout from '../src/components/home/HomeLayout'
 
-function IndexPage() {
-  return <div>Root</div>;
+
+export default function IndexPage() {
+  return (
+      <>
+        <HomeLayout/>
+      </>
+  )
 }
 
-export default IndexPage;
 
 
 // /** @jsx jsx */

@@ -1,34 +1,97 @@
 import BlogPost from '../../../src/components/blog/BlogPost'
+import Nav from '../../../src/components/shared/Nav'
 
 export const meta = {
-  title: '10 Steps How to Clown Like A Pro 🤡 🤡 🤡',
+  title: 'Get started with Next.js in 3 Steps 🤓💻',
   description: 'Deploy with Firebase',
-  date: 'Jan 01, 2021',
-  readTime: 4
+  date: 'Sep 05, 2020',
+  readTime: 6
+}
+
+![alt](https://mdx-logo.now.sh)
+
+export default ({ children }) => {
+        return (
+            <div>
+                <Nav/>
+                <BlogPost meta={meta}>{children}</BlogPost>
+            </div>
+    )
 }
 
 
-export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
 
 # My Headline
 ---
-### H3
+
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus pellentesque dolor non egestas.
 
-**Bold Text**
+some `inlineCode` here
 
-`console.log('Hello, World')`
 
-```
-{
-  "firstName": "Foo",
-  "lastName": "Bar",
-  "age": 27
+***
+## Step 1
+> blockquote
+
+- [x] Todo X
+- [ ] Todo Y
+- [ ] Todo Z
+
+<div>
+
+<style jsx>{`
+    .main {
+        margin: 0;
+        padding-left: 5rem;
+        font-family: "roboto";
+        background: #333;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: yellow;
+        }
+
+    h1 {
+    color: white;
+    }
+
+`}</style>
+
+<main className="main">
+
+<h1>```</h1>
+
+```javascript
+function HomePage() {
+  return <div>Welcome to Next.js!</div>
 }
+
+export default HomePage
 ```
 
-- [x] Todo 1
-- [ ] Todo 2
-- [ ] Todo 3
+<h1>```</h1>
 
+</main>
 
+</div>
+&nbsp;
+
+***
+## Step 2
+
+```javascript
+
+console.log('Hello, World')
+
+```
+**Bold**
+
+`inlineCode`
+
+---
+
+~~strikethrough~~
+
+***

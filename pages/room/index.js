@@ -1,14 +1,16 @@
-import {v4} from 'uuid'
-import React from 'react'
+import { v4 } from "uuid";
 
 const RoomIndex = () => {
-  return <div>&nbsp;</div>
-}
+  return <div>&nbsp;</div>;
+};
 
-RoomIndex.getInitialProps = ({res}) => {
-  res.redirect('/room/' + v4())
-}
+RoomIndex.getSeverSideProps = ({ res }) => {
+  if (res) {
+    res.writeHead(301, {
+      Location: "/room/" + v4(),
+    });
+    res.end();
+  }
+};
 
-export default RoomIndex
-
-
+export default RoomIndex;

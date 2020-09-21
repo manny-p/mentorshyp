@@ -5,8 +5,8 @@ const theme = {
     breakpoints: ['40em', '52em', '64em', '80em'],
     // colors: {
     //     ...future.colors,
-    //     fuckyou: 'yellow',
-    //     text2: 'blue',
+    //     colorTest: 'yellow',
+    //     textTest: 'blue',
     // },
     // fontSize: [16, 20, 24, 32],
     layout: {
@@ -67,7 +67,7 @@ const theme = {
             input: {
                 // outline: 'none',
                 borderRadius: '.25rem',
-                height:30,
+                height: 30,
                 // pl: '1rem',
                 // pr: '1rem',
 
@@ -86,12 +86,12 @@ const theme = {
             },
             button: {
                 borderRadius: '0 .25rem .25rem 0',
-               pt:'.25rem',
-                pr:'.5rem',
-                pl:'.5rem', // mb:'.5rem',
-                height:'80%',
-                mr:2,
-                fontSize: [1,2,3],
+                pt: '.25rem',
+                pr: '.5rem',
+                pl: '.5rem', // mb:'.5rem',
+                height: '80%',
+                mr: 2,
+                fontSize: [1, 2, 3],
                 bg: 'modes.dark.secondary',
                 color: 'text',
                 boxShadow: '0.025rem 0.05rem 0.25rem black',
@@ -155,12 +155,36 @@ const theme = {
                 alignItems: 'center',
                 flexGrow: 99999,
                 flexBasis: 0,
-                // bg: 'modes.dark.background',
+                bg: 'modes.dark.background',
                 // color: 'modes.dark.text',
                 borderBottom: '.1rem solid black',
                 // height: '100vh',
-                minHeight: '50vh',
-                minWidth: 320,
+                // minHeight: '50vh',
+                // minWidth: 320,
+                mx: 'auto',
+                px: 'auto'
+            },
+            inactive: {
+                video: {
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    flexGrow: 99999,
+                    flexBasis: 0,
+                    // bg: 'modes.dark.background',
+                    // color: 'modes.dark.text',
+                    // height: '100vh',
+                    minHeight: '50vh',
+                    // minWidth: 320,
+                    mx: 'auto',
+                    px: 'auto',
+                    fontSize: [1, 2, 3, 4],
+                },
+                logo: {
+                    fontSize: 'calc(48px + 46 * ((100vw - 368px) / 800))',
+                    color: 'modes.dark.background',
+                }
             }
         }
     },
