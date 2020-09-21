@@ -1,7 +1,8 @@
 import BlogPost from '../../../src/components/blog/BlogPost'
+import Nav from '../../../src/components/shared/Nav'
 
 export const meta = {
-  title: 'Get started with Next.js 🤓💻',
+  title: 'Get started with Next.js in 3 Steps 🤓💻',
   description: 'Deploy with Firebase',
   date: 'Sep 05, 2020',
   readTime: 6
@@ -9,25 +10,33 @@ export const meta = {
 
 ![alt](https://mdx-logo.now.sh)
 
-export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+export default ({ children }) => {
+        return (
+            <div>
+                <Nav/>
+                <BlogPost meta={meta}>{children}</BlogPost>
+            </div>
+    )
+}
+
+
+
 
 # My Headline
 ---
 
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus pellentesque dolor non egestas.
 
-
 some `inlineCode` here
 
 
-
+***
+## Step 1
 > blockquote
 
-- [x] Todo 1
-- [ ] Todo 2
-- [ ] Todo 3
-
-***
+- [x] Todo X
+- [ ] Todo Y
+- [ ] Todo Z
 
 <div>
 
@@ -54,7 +63,7 @@ some `inlineCode` here
 
 <h1>```</h1>
 
-```
+```javascript
 function HomePage() {
   return <div>Welcome to Next.js!</div>
 }
@@ -67,9 +76,16 @@ export default HomePage
 </main>
 
 </div>
+&nbsp;
 
 ***
+## Step 2
 
+```javascript
+
+console.log('Hello, World')
+
+```
 **Bold**
 
 `inlineCode`

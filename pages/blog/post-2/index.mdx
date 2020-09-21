@@ -1,6 +1,5 @@
 import BlogPost from '../../../src/components/blog/BlogPost'
-// import {mdx} from '@next/mdx'
-// import {mdx} from '@mdx-js/react'
+import Nav from '../../../src/components/shared/Nav'
 
 export const meta = {
   title: 'How to Do Something Cool 🤪',
@@ -9,7 +8,14 @@ export const meta = {
    readTime: 7
 }
 
-export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+export default ({ children }) => {
+        return (
+            <div>
+                <Nav/>
+                <BlogPost meta={meta}>{children}</BlogPost>
+            </div>
+    )
+}
 
 # My Headline Test
 

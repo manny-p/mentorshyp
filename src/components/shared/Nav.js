@@ -7,19 +7,24 @@ import {Button} from '@theme-ui/components'
 export default function Nav() {
   return (
       <nav sx={{variant: 'components.nav'}}>
-        <Link href={"/welcome"}>
+        <Link href={"/"}>
           <a sx={{ml: 2}}>Home</a>
         </Link>
-        <Link href="/">
+
+        <Link href={"/dashboard"}>
           <a>Dashboard</a>
         </Link>
+
         <Link href={'/blog'}>
           <a>Blog</a>
         </Link>
+
         <Search/>
-        <Link href={'/'}>
-          Video
+
+        <Link href={"/room/9a80cabe-45f6-4b8f-bd2e-49cc61f2bee9"}>
+          Chat
         </Link>
+
         <Button sx={{
           variant: 'components.search.button',
           bg: 'modes.dark.highlight',
@@ -28,7 +33,7 @@ export default function Nav() {
           textShadow: '.5px .5px 1px black',
         }}>
 
-          <Link href={'/login'}>
+          <Link href={'/dashboard'}>
             Log In
           </Link>
 
