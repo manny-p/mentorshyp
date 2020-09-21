@@ -57,6 +57,22 @@ const theme = {
                 }
             },
         },
+        button: {
+            boxShadow: '0.025rem 0.05rem 0.25rem black',
+            borderStyle: 'none',
+            outline: 'none',
+            borderRadius: '.25rem',
+            bg: 'modes.dark.primary',
+            fontSize: '1.5rem',
+            a: {
+                color: 'modes.dark.background',
+                textDecoration: 'none',
+
+                '&:hover': {
+                    color: 'modes.dark.highlight',
+                }
+            }
+        },
         search: {
             justifyContent: 'center',
             alignItems: 'center',
