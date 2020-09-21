@@ -3,7 +3,7 @@ import {jsx} from 'theme-ui'
 import Iframe from 'react-iframe'
 import {useContext} from 'react'
 import {Context} from '../../../../../store'
-import Inactive from './event/Inactive'
+
 
 export default function VideoActive() {
 
@@ -12,6 +12,7 @@ export default function VideoActive() {
   return (
       <div>
         <Iframe
+            // id='remote'
             url="/room/calling"
             display={call ? 'block' : 'none'}
             sx={{
