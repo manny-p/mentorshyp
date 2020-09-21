@@ -100,7 +100,7 @@ export default Room = ({query: {roomId}}) => {
               style={{
                 height: '100vh',
                 type:"video/webm",
-                width: '58vw',
+                width: '75vw',
                 objectFit: 'cover',
                 // objectPosition: 'center',
               }}
@@ -114,7 +114,7 @@ export default Room = ({query: {roomId}}) => {
               type:"video/webm",
               // marginTop: '10px',
               // background: 'brown',
-              width: '42vw',
+              width: '25vw',
               // marginLeft: '8px',
               objectFit: 'cover',
               // objectPosition: 'center',

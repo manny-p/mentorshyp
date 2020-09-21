@@ -14,7 +14,7 @@ export default function VideoActive() {
           display={call ? 'block' : 'none'}
           sx={{
             height: '50vh',
-            width: '100vw',
+            width: '80vw',
             position: 'absolute',
             // zIndex: '10',
           }}
