@@ -12,7 +12,6 @@ export default function IndexPage() {
         <Grid>
           <Nav/>
           <AboveTheFold/>
-          <Frame/>
           <ValueProp/>
         </Grid>
       </>

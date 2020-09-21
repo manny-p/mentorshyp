@@ -142,7 +142,7 @@ const theme = {
                 },
                 preferences: {
                     fontSize: [null, 2, 3],
-                    justifyContent: 'flex-end',
+                    justifyContent: 'space-around',
                     pr: '.5rem',
                     bg: 'modes.dark.highlight',
                 },
@@ -163,7 +163,7 @@ const theme = {
                 flexBasis: 0,
                 bg: 'modes.dark.background',
                 // color: 'modes.dark.text',
-                borderBottom: '.1rem solid black',
+                // borderBottom: '.1rem solid black',
                 // height: '100vh',
                 // minHeight: '50vh',
                 // minWidth: 320,

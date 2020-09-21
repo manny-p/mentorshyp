@@ -7,6 +7,7 @@ import {Context} from '../../store'
 import {useContext} from 'react'
 import VideoInactive from '../../src/components/user/dashboard/main/VideoInactive'
 import VideoActive from '../../src/components/user/dashboard/main/VideoActive'
+import Inactive from '../../src/components/user/dashboard/main/event/Inactive'
 
 export default function DashboardPage() {
 
@@ -17,9 +18,13 @@ export default function DashboardPage() {
   //   if (!call) return <VideoInactive/>
   // }
 
-
   return (
-      <div>
+      <div
+          sx={{
+            borderStyle: 'none',
+            outline: 'none'
+          }}
+      >
         <div sx={{variant: 'layout.container'}}>
           <header sx={{variant: 'layout.nav'}}>
             <Nav/>
@@ -33,22 +38,31 @@ export default function DashboardPage() {
           <main sx={{variant: 'layout.video'}}>
             {/*inactive video state*/}
             {/*<div>*/}
-              {/*{videoStatus}*/}
+            {/*{videoStatus}*/}
             {/*</div>*/}
-
-     <VideoActive/>
-          <VideoInactive/>
+            <Inactive
+                // sx={{
+                //   height: '50vh',
+                //   width: '80vw',
+                //   position: 'fixed',
+                //   zIndex: 10,
+                //   top:0,
+                //   left: 0
+                // }}
+            />
+            <VideoActive/>
+            <VideoInactive/>
 
 
           </main>
 
-            {/*<div*/}
-            {/*    sx={{*/}
-            {/*      variant: 'components.main.inactive.videoContainer',*/}
-            {/*    }}*/}
-            {/*>*/}
+          {/*<div*/}
+          {/*    sx={{*/}
+          {/*      variant: 'components.main.inactive.videoContainer',*/}
+          {/*    }}*/}
+          {/*>*/}
 
-            {/*</div>*/}
+          {/*</div>*/}
 
         </div>
       </div>

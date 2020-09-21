@@ -11,7 +11,6 @@ export default function VideoActive() {
 
   return (
       <div>
-        <Inactive/>
         <Iframe
             url="/room/calling"
             display={call ? 'block' : 'none'}
@@ -19,6 +18,8 @@ export default function VideoActive() {
               height: '50vh',
               width: '80vw',
               position: 'absolute',
+              borderStyle: 'none',
+              outline: 'none,'
               // zIndex: '10',
             }}
         >
